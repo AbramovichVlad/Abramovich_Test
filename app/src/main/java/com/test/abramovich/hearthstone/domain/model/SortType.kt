@@ -2,7 +2,7 @@ package com.test.abramovich.hearthstone.domain.model
 
 data class SortType(
     var direction : SortDirection = SortDirection.ASCENDING,
-    var field : SortField = SortField.CLASS
+    var field : SortField = SortField.NAME
 )
 
 enum class SortDirection(){
@@ -10,5 +10,5 @@ enum class SortDirection(){
 }
 
 enum class SortField(){
-    COAST(), CLASS()
+    COAST(), NAME()
 }

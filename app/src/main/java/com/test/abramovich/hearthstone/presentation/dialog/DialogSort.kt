@@ -22,7 +22,7 @@ class DialogSort(
     private fun setData() {
         when (sortType.field) {
             SortField.COAST -> binding.rbCoast.isChecked = true
-            SortField.CLASS -> binding.rbClass.isChecked = true
+            SortField.NAME -> binding.rbName.isChecked = true
         }
         when (sortType.direction) {
             SortDirection.ASCENDING -> binding.rbAccending.isChecked = true
@@ -42,7 +42,7 @@ class DialogSort(
 
         binding.rgType.setOnCheckedChangeListener { group, checkedId ->
             if (checkedId == R.id.rb_coast) sortType.field = SortField.COAST
-            else sortType.field = SortField.CLASS
+            else sortType.field = SortField.NAME
         }
     }
 

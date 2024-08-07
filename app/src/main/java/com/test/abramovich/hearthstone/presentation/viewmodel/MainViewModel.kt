@@ -113,6 +113,8 @@ class MainViewModel @Inject constructor(
             val sortList = cardList.value?.let {sortUseCase.execute(it, sortType)}
             sortList?.let {  cardList.value = it }
             sortList?.let { _cardListUi.emit(CardUiModel.Successfully(it)) }
+            Log.d("tagDataSot", "1${sortList?.get(0)?.name}1")
+            Log.d("tagDataSot", "1${sortList?.get(1)?.name}1")
         }
     }
 
